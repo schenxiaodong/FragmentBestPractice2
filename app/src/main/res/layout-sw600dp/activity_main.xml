@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--    双页模式下引入两个碎片-->‘
+    <fragment
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/news_title_fragment"
+        android:name="com.example.fragmentbestpractice2.fragment.NewsTitleFragment" />
+<!--    将心事内容碎片放入到frameLayout布局下-->
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/news_content_layout"
+        android:layout_weight="3">
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/news_content_fragment"
+            android:name="com.example.fragmentbestpractice2.fragment.NewsContentFragment" />
+    </FrameLayout>
+
+
+</LinearLayout>
